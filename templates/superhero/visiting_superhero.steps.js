@@ -8,28 +8,24 @@ defineSupportCode(function({Given, When, Then}) {
     });
 
     When('I click on {stringInDoubleQuotes} link', function (text) {
-        return this.waitForElement({linkText: text})
-            .then((element) => {
-                return element.click();
-            });
+        let locator = this.getSIDLocator('heroLink-chuck-norris');
+
+        return this.driver.findElement(locator).click();
     });
 
     Then('I should see the heroes name {name:stringInDoubleQuotes}', function (name) {
         let locator = this.getSIDLocator('hero');
 
-        return this.waitForElement(locator)
-            .then(elem => {
-                elem.getText()
-                    .then( text => {assert.equal(text, name)});
-            });
+        return this.driver.findElement(locator).getText().then( text => {
+            assert.equal(text, name);
+        });
     });
 
     Then('I should see the statement {desc:stringInDoubleQuotes}', function (desc) {
         let locator = this.getSIDLocator('statement');
 
-        return this.waitForElement(locator)
-            .then(elem => {
-                elem.getText().then(text => assert.equal(text, desc));
+        return this.driver.findElement(locator).getText().then(text => {
+            assert.equal(text, desc);
         });
     });
 });

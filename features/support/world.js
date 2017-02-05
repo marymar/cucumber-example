@@ -10,11 +10,6 @@ function SuperheroesWorld() {
         .forBrowser('chrome')
         .build();
 
-    this.waitForElement = (locator) => {
-        let condition = until.elementLocated(locator);
-        return this.driver.wait(condition);
-    };
-
     this.getSIDLocator = (sidValue) => {
         return By.css(`[data-sid=${sidValue}]`);
     }
