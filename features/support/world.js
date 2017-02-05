@@ -24,16 +24,3 @@ defineSupportCode(function({setWorldConstructor, setDefaultTimeout}) {
     setWorldConstructor(SuperheroesWorld);
     setDefaultTimeout(10 * 1000);
 });
-
-
-
-
-
-
-/***
-
-
- http://www.richardruiter.nl/you-dont-need-to-callback-cucumber-js-but-it-will-call-you-i-promise/
-
-
- ***/
