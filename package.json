@@ -1,0 +1,21 @@
+{
+  "name": "bbd",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "cucumber": "^2.0.0-rc.6"
+  },
+  "devDependencies": {
+    "chromedriver": "^2.25.1",
+    "cucumber": "^2.0.0-rc.6",
+    "http-server": "^0.9.0",
+    "selenium-webdriver": "^3.0.1"
+  },
+  "scripts": {
+    "start": "http-server src -p 8000",
+    "test": "cucumber.js"
+  },
+  "author": "",
+  "license": "ISC"
+}
