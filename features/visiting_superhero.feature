@@ -1,8 +1,8 @@
-Feature: Visiting superhero
-  As a superheroes expert, I want to study every details of an superhero,
-  to keep my expert knowledge to the top level.
+Feature: Visiting Superheroes Details
+  As a superheroes expert, I want to study every details of an superhero, to keep my expert knowledge to the top level.
 
-  Scenario: Visiting superhero from superheroes guide
+  Scenario: Visiting superheroes details
+
     Given I am on the superheroes guide
     When I click on "Chuck Norris" link
     Then I should see the heroes name "Chuck Norris"

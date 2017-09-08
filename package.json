@@ -13,8 +13,9 @@
     "selenium-webdriver": "^3.0.1"
   },
   "scripts": {
-    "start": "http-server src -p 8000",
-    "test": "cucumber.js"
+    "startApp": "http-server src -p 8000",
+    "test": "cucumber.js",
+    "pretest": "npm run startApp &"
   },
   "author": "",
   "license": "ISC"
